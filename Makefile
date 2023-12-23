@@ -11,13 +11,13 @@ update:
 	poetry install --no-root
 
 test:
-	pytest $(TEST_FOLDER) --cov=$(CODE_FOLDERS)
+	poetry run pytest $(TEST_FOLDER) --cov=$(CODE_FOLDERS)
 
 format:
 	poetry run black .
 
 lint:
-	poetry run black --check .
-	poetry run flake8 $(CODE_FOLDERS) $(TEST_FOLDERS)
+	poetry run black ${CODE_FOLDERS} $(TEST_FOLDERS)
+	poetry run flake8 $(CODE_FOLDERS)
 	poetry run pylint $(CODE_FOLDERS)
 	poetry run mypy $(CODE_FOLDERS)

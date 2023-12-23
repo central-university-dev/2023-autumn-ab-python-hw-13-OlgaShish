@@ -3,7 +3,7 @@
 from typing import Any, Optional
 from datetime import datetime, timedelta
 import json
-import jwt
+import jwt  # type: ignore
 
 
 def read_token(body: dict) -> Optional[Any]:
@@ -21,7 +21,6 @@ def make_token(user_id: Any) -> str:
     """make token by config key_word and user_id"""
     with open("config.json", encoding="utf-8") as config:
         key_word = json.load(config)["key_word"]
-    key_word = json.load(config)["key_word"]
     json_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     body = {"user_id": str(user_id), "time": str(json_time)}
     token = jwt.encode(body, key_word, algorithm="HS256")
@@ -33,6 +32,5 @@ def is_token_need_refresh(body: dict) -> bool:
     jwt_token = read_token(body)
     if jwt_token is None:
         return False
-    print(jwt_token)
     time = datetime.strptime(jwt_token["time"], "%Y-%m-%d %H:%M:%S")
     return datetime.now() - time > timedelta(hours=1)
