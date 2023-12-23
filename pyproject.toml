@@ -13,6 +13,9 @@ pyjwt = "^2.8.0"
 pytest = "^7.4.3"
 black = "^23.9.1"
 pylint = "^3.0.1"
+mypy = "^1.6.0"
+pytest-cov = "^4.1.0"
+pytest-mock = "^3.12.0"
 
 
 [build-system]
