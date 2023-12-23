@@ -1,0 +1,10 @@
+/.env
+/.idea
+pycache/
+/.mypy_cache
+.pytest_cache
+.coverage
+hw_15.db
+poetry.lock
+/.coverage
+/node_modules
