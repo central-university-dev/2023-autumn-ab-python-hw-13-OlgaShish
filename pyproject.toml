@@ -2,7 +2,7 @@
 name = "hw-15"
 version = "0.1.0"
 description = ""
-authors = ["Grigoriy Mikheev <mikheevg@biocad.ru>"]
+authors = ["Olga Shishlina stetsyuk_olenka@mail.ru"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
