@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+   	 <title>ToDo List</title>
+   	 <meta charset="utf-8">
+   	 <link rel="stylesheet" type="text/css" href="app.css">
+    </head>
+    <body>
+        <script type="text/javascript" src="app.js"></script>
+   	 <div class="wrapper">
+   		<header class="header">
+   			<div class="header__content">
+   				<h1 class="header__title" id="title" style="text-align: center">TODO List</div>
+   			</div>
+   		</header>
+        <main class="main">
+   			<div class="main__content" id="body" style="text-align: center">
+   				<p>Pls, Login or create account (click on the button if you are an admin): </p>
+
+   			    <input type="text" id="login" placeholder="Login..."  >
+                <input type="text" id="password" placeholder="Password...">
+                <input type="text" id="admin" placeholder="Admin...">
+                <p><button onclick="LoginOrRegistration()">Sign-In/Sign-Up</button>
+   			</div>
+
+            <div class="main__content" id="body", style="text-align: center">
+                <p>TodoList</p>
+                <p>Enter one name for add/del and old_name,new_name for edit</p>
+                <input type="text" id="task_name" placeholder="Task name...">
+                <button onclick="AddTask()" id="add">Add</button>
+                <button onclick="EditTask()" id="edit">Edit</button>
+                <button onclick="DelTask()" id="del">Del</button>
+            </div>
+
+            <div id="ReloginField" style="display: none;">
+                You need relogin!
+            </div>
+
+            <ul id="tasks-list">
+            </ul>
+            <dib class="storage"></dib>
+
+   		</main>
+    
+   	</div>
+    </body>
+</html>
